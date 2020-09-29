@@ -1,0 +1,135 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
+:root {
+    --primary-color: #D4B996FF;
+    --secondary-color: #A07855FF;
+    --terciary-color: #7159c1;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+header div {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--secondary-color);
+}
+
+.links a {
+    margin: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.links a:hover {
+    color: var(--terciary-color);
+    transition: color 300ms;
+}
+
+.pageInfos {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.pageInfos img {
+    border-radius: 50%;
+    height: 240px;
+    border: 5px solid var(--secondary-color);
+    margin-bottom: 32px;
+}
+
+.pageInfos h1,
+.cardsTitle {
+    text-align: center;
+    font-weight: bold;
+    line-height: 52px;
+    font-size: 42px;
+    border-bottom: 5px dotted var(--secondary-color);
+    max-width: 250px;
+    margin: 32px auto;
+}
+
+.pageInfos p {
+    font-weight: normal;
+    opacity: 0.9;
+    line-height: 32px;
+    font-size: 18px;
+    max-width: 450px;
+    margin: 32px auto;
+}
+
+.pageInfos ul {
+    line-height: 32px;
+    border: 1px dotted var(--secondary-color);
+    border-radius: 50px;
+    max-width: 250px;
+    margin: 32px auto;
+    list-style-type: none;
+}
+
+#footer {
+    margin-top: 24px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    padding: 20px
+}
+
+#footer a {
+    font-size: 18px;
+}
+
+
+/* Pagina Conteudos | CARDS */
+
+.cards {
+    margin: 0 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.card {
+    max-width: 500px;
+    background-color: var(--terciary-color);
+}
+
+.cardImageContainer img {
+    width: 100%;
+}
+
+.cardContent,
+.cardInfo {
+    padding: 20px;
+}
+
+.cardContent {
+    font-weight: bold;
+    text-align: center;
+}
+
+.cardInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.author {
+    text-align: center;
+}
+
+.readingTime {
+    background-color: var(--terciary-color);
+    filter: brightness(90%);
+    border-radius: 50px;
+    padding: 3px 10px;
+    text-align: center;
+}
