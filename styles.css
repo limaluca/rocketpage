@@ -134,12 +134,17 @@ header div {
     text-align: center;
 }
 
+
+/* Modal Overlay */
+
 .modalOverlay {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     top: 83px;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .modal {
@@ -155,4 +160,13 @@ header div {
     position: absolute;
     top: 8px;
     right: 8px;
+    cursor: pointer;
+}
+
+
+/* Modal OverLay Active */
+
+.modalOverlay.active {
+    visibility: visible;
+    opacity: 1;
 }
