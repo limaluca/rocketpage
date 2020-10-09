@@ -2,7 +2,7 @@ const express = require('express');
 const nunjucks = require('nunjucks');
 
 const server = express();
-server.set('view engine', 'html');
+server.set('view engine', '.njk');
 
 server.use(express.static('public'));
 
@@ -15,6 +15,7 @@ server.listen(5000, function() {
 })
 
 
+
 server.get("/", function(req, res) {
     return res.render('about')
 })
@@ -22,3 +23,7 @@ server.get("/", function(req, res) {
 server.get("/courses", function(req, res) {
     return res.render('courses')
 })
+
+server.use(function(req, res) {
+    res.status(404).render("not-found");
+});
