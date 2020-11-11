@@ -1,11 +1,16 @@
 {% extends "layout.njk" %} {% block content%}
 
+{% block head%}<title>Conheça a rocketseat</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+{%endblock%}
 
 
 <div class="pageInfos">
     <img src={{aboutData.avatar_url}} alt="Imagem de {{ aboutData.title }}">
     <h1>{{aboutData.title}}</h1>
     <p>{{aboutData.description}}</p>
+    
     <ul>
         {% for tech in aboutData.technologies%} 
         <li> {{ tech }} </li>
@@ -14,10 +19,14 @@
 
 </div>      
 
+
+
+{% endblock %}
+
+{% block footer%}
 <div id="footer" class="links">
     <a href="https://github.com/rocketseat-education/">Github</a>
     <a href="https://www.instagram.com/rocketseat_oficial/">Instagram</a>
     <a href="https://www.facebook.com/rocketseat">Facebook</a>
 </div>
-
 {% endblock %}

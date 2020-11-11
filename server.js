@@ -3,6 +3,7 @@ const nunjucks = require('nunjucks');
 const courseContents = require('./data');
 
 const server = express();
+
 server.set('view engine', '.njk');
 
 server.use(express.static('public'));
@@ -23,12 +24,33 @@ server.get("/", function(req, res) {
         title: "Rocketseat",
         description: "Evolua rápido como a tecnologia. Junte-se a milhares de devs e acelere na direção dos seus objetivos.",
         technologies: ["HTML", "Javascript", "React", "React Native"]
+
     }
     return res.render('about', { aboutData })
 })
 
 server.get("/courses", function(req, res) {
     return res.render('courses', { items: courseContents })
+})
+
+server.get("/course", function(req, res) {
+    const id = req.query.id;
+
+    const course = courseContents.find(function(course) {
+        if (course.id == id) {
+            console.log(course.id)
+            return true
+
+        }
+
+    })
+    if (!course) {
+        return res.send("Course not found!")
+    }
+
+    return res.render("course", { item: course })
+
+
 })
 
 server.use(function(req, res) {

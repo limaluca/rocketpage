@@ -19,26 +19,4 @@ module.exports = [{
         author: "Thiago Marinho",
         duration: "6 Minutos"
     }
-]
-
-/*
-<div class="cardImageContainer">
-            <img src="https://blog.rocketseat.com.br/content/images/2020/09/axios-um-cliente-http-full-stack-rocketseat.png" alt="nodeJS">
-        </div>
-
-        <div class="cardContent">
-            <p>Axios - um cliente HTTP ull Stack</p>
-        </div>
-
-        <div class="cardInfo">
-            <div class="author">
-                <p>Thiago Marinho</p>
-            </div>
-
-            <div class="readingTime">
-                <p>10 Minutos</p>
-            </div>
-        </div>
-    </div>
-
-*/
+];
