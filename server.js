@@ -37,11 +37,7 @@ server.get("/course", function(req, res) {
     const id = req.query.id;
 
     const course = courseContents.find(function(course) {
-        if (course.id == id) {
-            console.log(course.id)
-            return true
-
-        }
+        return course.id == id
 
     })
     if (!course) {

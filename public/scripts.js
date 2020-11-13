@@ -8,22 +8,22 @@ const cards = document.querySelectorAll('.card');
 
 for (let card of cards) {
     card.addEventListener('click', function() {
-        modalOverlay.classList.add('active');
-        const pageId = card.getAttribute('id')
-        modalOverlay.querySelector('iframe').src = `https://blog.rocketseat.com.br/${pageId}`
+        const pageId = card.getAttribute("id");
+        window.location.href = `/course?id=${pageId}`
+
+
     })
 }
 
-// building closing overlay function
-document.querySelector('.closeModal').addEventListener('click', function() {
-    modalOverlay.classList.remove('active')
-    modalOverlay.querySelector('iframe').src = ""
-})
 
-document.querySelector('.maximizeModal').addEventListener('click', function() {
-    if (modal.classList.contains('maximize')) {
-        modal.classList.remove('maximize')
-    } else {
-        modal.classList.add('maximize')
-    }
-})
+
+
+
+
+// document.querySelector('.maximizeModal').addEventListener('click', function() {
+//     if (modal.classList.contains('maximize')) {
+//         modal.classList.remove('maximize')
+//     } else {
+//         modal.classList.add('maximize')
+//     }
+// })
